@@ -1,0 +1,36 @@
+spring:
+    application:
+        name: app
+    datasource:
+        password: Hamid@254
+        url: jdbc:sqlserver://localhost:1433;database=db_kop;encrypt=true;trustServerCertificate=true;
+        # jdbc:sqlserver://localhost:1433;databaseName=ufanibackup;user=sa;password=Hamid@254;
+        username: sa
+        # driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jpa: 
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.SQLServer2012Dialect
+                globally_quoted_identifiers: true
+                #  org.hibernate.dialect.MySQLDialect
+        hibernate: 
+            ddl-auto: update
+    mail: 
+        host: smtp.gmail.com
+        port: 587
+        username: abassahmed1738@gmail.com
+        password: calxipsfnkonsvuw
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+server:
+    port: 1010
+
+security:
+    jwt:
+        token:
+            secret-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNS1VVIFNVUkEgTUJBIiwibmFtZSI6IkFiYXNzIEFobWVkIiwiaWF0IjoxMTExMzAyMzAwMH0.VjM5TYLuRqcyD00UNNLCD4dheoxm9prWQ7fwlvBQY-w
